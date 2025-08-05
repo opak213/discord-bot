@@ -1,0 +1,7 @@
+{
+    "create_channel_id": null,
+    "category_id": null,
+    "channel_name_template": "\ud83c\udfa4 {user}'s Channel",
+    "max_channels_per_user": 3,
+    "delete_delay": 5
+}

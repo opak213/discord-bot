@@ -1,0 +1,7 @@
+{
+    "create_channel_id": 1402338301993681007,
+    "category_id": 1402338300081213532,
+    "channel_name_template": "\ud83c\udfa4 {user}'s Channel",
+    "max_channels_per_user": 3,
+    "delete_delay": 1
+}
