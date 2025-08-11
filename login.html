@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HORE-BOT Dashboard</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fab fa-discord"></i>
+                <h1>HORE-BOT</h1>
+                <p>Dashboard Management System</p>
+            </div>
+            
+            <div class="login-features">
+                <div class="feature">
+                    <i class="fas fa-cogs"></i>
+                    <span>Kelola Bot dengan Mudah</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-music"></i>
+                    <span>Kontrol Musik Real-time</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <span>Kelola Server & Member</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Keamanan Terjamin</span>
+                </div>
+            </div>
+
+            <button class="discord-login-btn" onclick="loginWithDiscord()">
+                <i class="fab fa-discord"></i>
+                Login dengan Discord
+            </button>
+
+            <div class="login-note">
+                <i class="fas fa-info-circle"></i>
+                <span>Anda akan diarahkan ke halaman otorisasi Discord</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loginWithDiscord() {
+            window.location.href = '/auth/login';
+        }
+
+        // Check if already logged in
+        fetch('/auth/check')
+            .then(res => res.json())
+            .then(data => {
+                if (data.authenticated) {
+                    window.location.href = '/dashboard';
+                }
+            });
+    </script>
+</body>
+</html>

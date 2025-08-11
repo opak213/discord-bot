@@ -1,0 +1,355 @@
+{
+  "categories": [
+    {
+      "name": "Basic Commands",
+      "description": "Essential bot commands for everyday use",
+      "commands": [
+        {
+          "name": "ping",
+          "usage": "!ping",
+          "description": "Check bot latency and response time",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!ping"],
+          "category": "basic"
+        },
+        {
+          "name": "hello",
+          "usage": "!hello",
+          "description": "Get a friendly greeting from the bot",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!hello"],
+          "category": "basic"
+        }
+      ]
+    },
+    {
+      "name": "Moderation",
+      "description": "Server moderation and management tools",
+      "commands": [
+        {
+          "name": "kick",
+          "usage": "!kick <@user> [reason]",
+          "description": "Remove a member from the server",
+          "aliases": [],
+          "permissions": ["Kick Members"],
+          "examples": ["!kick @user Spam", "!kick @user"],
+          "category": "moderation"
+        },
+        {
+          "name": "ban",
+          "usage": "!ban <@user> [reason]",
+          "description": "Permanently ban a member from the server",
+          "aliases": [],
+          "permissions": ["Ban Members"],
+          "examples": ["!ban @user Rule violation", "!ban @user"],
+          "category": "moderation"
+        },
+        {
+          "name": "clear",
+          "usage": "!clear [amount]",
+          "description": "Clear messages from the channel",
+          "aliases": [],
+          "permissions": ["Manage Messages"],
+          "examples": ["!clear 10", "!clear"],
+          "category": "moderation"
+        }
+      ]
+    },
+    {
+      "name": "Music",
+      "description": "Music playback and queue management",
+      "commands": [
+        {
+          "name": "join",
+          "usage": "!join",
+          "description": "Join your current voice channel",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!join"],
+          "category": "music"
+        },
+        {
+          "name": "play",
+          "usage": "!play <song/url>",
+          "description": "Play a song from YouTube or URL",
+          "aliases": [],
+          "permissions": ["Connect", "Speak"],
+          "examples": ["!play never gonna give you up", "!play https://youtube.com/watch?v=dQw4w9WgXcQ"],
+          "category": "music"
+        },
+        {
+          "name": "skip",
+          "usage": "!skip",
+          "description": "Skip the current song",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!skip"],
+          "category": "music"
+        },
+        {
+          "name": "queue",
+          "usage": "!queue",
+          "description": "Show the current music queue",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!queue"],
+          "category": "music"
+        },
+        {
+          "name": "leave",
+          "usage": "!leave",
+          "description": "Leave the voice channel",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!leave"],
+          "category": "music"
+        }
+      ]
+    },
+    {
+      "name": "Fun & Games",
+      "description": "Entertainment and game commands",
+      "commands": [
+        {
+          "name": "roll",
+          "usage": "!roll [dice]",
+          "description": "Roll dice (format: 2d6 for 2 six-sided dice)",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!roll 2d6", "!roll"],
+          "category": "fun"
+        },
+        {
+          "name": "coinflip",
+          "usage": "!coinflip",
+          "description": "Flip a coin",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!coinflip"],
+          "category": "fun"
+        },
+        {
+          "name": "8ball",
+          "usage": "!8ball <question>",
+          "description": "Magic 8-ball fortune telling",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!8ball Will I win the lottery?"],
+          "category": "fun"
+        },
+        {
+          "name": "meme",
+          "usage": "!meme",
+          "description": "Get a random meme",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!meme"],
+          "category": "fun"
+        },
+        {
+          "name": "joke",
+          "usage": "!joke",
+          "description": "Get a random joke",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!joke"],
+          "category": "fun"
+        }
+      ]
+    },
+    {
+      "name": "Economy",
+      "description": "Virtual currency and economy system",
+      "commands": [
+        {
+          "name": "balance",
+          "usage": "!balance",
+          "description": "Check your coin balance",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!balance"],
+          "category": "economy"
+        },
+        {
+          "name": "work",
+          "usage": "!work",
+          "description": "Earn coins by working",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!work"],
+          "category": "economy"
+        },
+        {
+          "name": "gamble",
+          "usage": "!gamble <amount>",
+          "description": "Gamble your coins",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!gamble 100", "!gamble 50"],
+          "category": "economy"
+        },
+        {
+          "name": "daily",
+          "usage": "!daily",
+          "description": "Claim your daily reward",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!daily"],
+          "category": "economy"
+        }
+      ]
+    },
+    {
+      "name": "Utility",
+      "description": "Useful tools and information commands",
+      "commands": [
+        {
+          "name": "weather",
+          "usage": "!weather <city>",
+          "description": "Get weather information for a city",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!weather London", "!weather New York"],
+          "category": "utility"
+        },
+        {
+          "name": "remind",
+          "usage": "!remind <time> <message>",
+          "description": "Set a reminder",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!remind 5m Take a break", "!remind 1h Check email"],
+          "category": "utility"
+        },
+        {
+          "name": "server",
+          "usage": "!server",
+          "description": "Get server information",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!server"],
+          "category": "utility"
+        },
+        {
+          "name": "userinfo",
+          "usage": "!userinfo [@user]",
+          "description": "Get user information",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["!userinfo", "!userinfo @user"],
+          "category": "utility"
+        }
+      ]
+    },
+    {
+      "name": "Custom Commands",
+      "description": "Server-specific custom commands",
+      "commands": [
+        {
+          "name": "custom add",
+          "usage": "!custom add <name> <response>",
+          "description": "Create a new custom command",
+          "aliases": [],
+          "permissions": ["Manage Server"],
+          "examples": ["!custom add welcome Welcome to our server, {user}!"],
+          "category": "custom"
+        },
+        {
+          "name": "custom edit",
+          "usage": "!custom edit <name> <new_response>",
+          "description": "Edit an existing custom command",
+          "aliases": [],
+          "permissions": ["Manage Server"],
+          "examples": ["!custom edit welcome Welcome to our awesome server, {user}!"],
+          "category": "custom"
+        },
+        {
+          "name": "custom list",
+          "usage": "!custom list",
+          "description": "List all custom commands",
+          "aliases": [],
+          "permissions": ["Manage Server"],
+          "examples": ["!custom list"],
+          "category": "custom"
+        }
+      ]
+    },
+    {
+      "name": "TempVoice",
+      "description": "Temporary voice channel management",
+      "commands": [
+        {
+          "name": "vc rename",
+          "usage": "!vc rename <new_name>",
+          "description": "Rename your temporary voice channel",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!vc rename Gaming Room", "!vc rename Study Zone"],
+          "category": "tempvoice"
+        },
+        {
+          "name": "vc lock",
+          "usage": "!vc lock",
+          "description": "Lock your temporary voice channel",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!vc lock"],
+          "category": "tempvoice"
+        },
+        {
+          "name": "vc limit",
+          "usage": "!vc limit <number>",
+          "description": "Set user limit for your temporary voice channel",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!vc limit 5", "!vc limit 10"],
+          "category": "tempvoice"
+        },
+        {
+          "name": "vc delete",
+          "usage": "!vc delete",
+          "description": "Delete your temporary voice channel",
+          "aliases": [],
+          "permissions": ["Connect"],
+          "examples": ["!vc delete"],
+          "category": "tempvoice"
+        }
+      ]
+    },
+    {
+      "name": "Slash Commands",
+      "description": "Modern slash commands for better user experience",
+      "commands": [
+        {
+          "name": "/meme",
+          "usage": "/meme",
+          "description": "Get a random meme via slash command",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["/meme"],
+          "category": "slash"
+        },
+        {
+          "name": "/joke",
+          "usage": "/joke",
+          "description": "Get a random joke via slash command",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["/joke"],
+          "category": "slash"
+        },
+        {
+          "name": "/roll",
+          "usage": "/roll [dice]",
+          "description": "Roll dice via slash command",
+          "aliases": [],
+          "permissions": ["Send Messages"],
+          "examples": ["/roll 2d6", "/roll"],
+          "category": "slash"
+        }
+      ]
+    }
+  ]
+}

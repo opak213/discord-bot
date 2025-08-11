@@ -1,0 +1,138 @@
+/* CSS Variables for Theme Support */
+:root {
+    --bg-primary: #f0f2f5;
+    --bg-secondary: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --accent-color: #5865f2;
+    --discord-color: #7289da;
+    --card-bg: #ffffff;
+    --border-color: #e1e4e8;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 30px;
+}
+
+.login-header i {
+    font-size: 48px;
+    color: var(--discord-color);
+    margin-bottom: 10px;
+}
+
+.login-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.login-header p {
+    margin: 5px 0 0 0;
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.login-features {
+    margin: 30px 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.feature i {
+    color: var(--accent-color);
+    margin-right: 12px;
+    width: 20px;
+}
+
+.discord-login-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--discord-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.discord-login-btn:hover {
+    background: #5b6bc5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(114, 137, 218, 0.4);
+}
+
+.discord-login-btn:active {
+    transform: translateY(0);
+}
+
+.login-note {
+    margin-top: 20px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.login-note i {
+    color: var(--accent-color);
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+    
+    .login-header h1 {
+        font-size: 24px;
+    }
+    
+    .discord-login-btn {
+        font-size: 14px;
+        padding: 14px;
+    }
+}

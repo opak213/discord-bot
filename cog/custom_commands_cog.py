@@ -27,15 +27,29 @@ class CustomCommands(commands.Cog):
     
     def replace_variables(self, text, ctx):
         """Replace variables in custom command responses"""
+        # Handle both Context and Message objects
+        if hasattr(ctx, 'author'):
+            # This is a Message object
+            user = ctx.author
+            guild = ctx.guild
+            channel = ctx.channel
+            prefix = '!'  # Default prefix for custom commands
+        else:
+            # This is a Context object
+            user = ctx.author
+            guild = ctx.guild
+            channel = ctx.channel
+            prefix = ctx.prefix
+        
         variables = {
-            '{user}': ctx.author.mention,
-            '{user_name}': ctx.author.name,
-            '{user_id}': str(ctx.author.id),
-            '{server}': ctx.guild.name,
-            '{server_id}': str(ctx.guild.id),
-            '{channel}': ctx.channel.mention,
-            '{channel_name}': ctx.channel.name,
-            '{prefix}': ctx.prefix,
+            '{user}': user.mention,
+            '{user_name}': user.name,
+            '{user_id}': str(user.id),
+            '{server}': guild.name if guild else 'DM',
+            '{server_id}': str(guild.id) if guild else '0',
+            '{channel}': channel.mention,
+            '{channel_name}': channel.name,
+            '{prefix}': prefix,
             '{time}': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
         
@@ -87,7 +101,7 @@ class CustomCommands(commands.Cog):
             await ctx.send(f"❌ Command `{name}` already exists! Use `!custom edit {name}` to modify it.")
             return
         
-        if name.startswith('!'):
+        if name.startswith('H!'):
             name = name[1:]  # Remove ! if provided
         
         # Check if it's trying to override built-in commands

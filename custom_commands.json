@@ -1,0 +1,16 @@
+{
+    "rules": {
+        "response": "test rules",
+        "author": "210985105781424128",
+        "author_name": "navermore_",
+        "created_at": "2025-08-06T01:20:20.910115",
+        "uses": 2
+    },
+    "test": {
+        "response": "Hello {user}! This is a test custom command.",
+        "author": "210985105781424128",
+        "author_name": "navermore_",
+        "created_at": "2025-08-06T01:20:20.910115",
+        "uses": 0
+    }
+}
